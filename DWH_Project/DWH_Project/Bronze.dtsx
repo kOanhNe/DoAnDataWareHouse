@@ -7,12 +7,12 @@
   DTS:CreatorName="LAPTOP-JL7J4JS3\Lenovo"
   DTS:DTSID="{347B169D-EA54-4376-BE52-FE05AE494A28}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{4660D67E-85FC-4EB1-A17B-63AB4ABED1F4}">
+  DTS:VersionBuild="59"
+  DTS:VersionGUID="{2B8EDD5B-42B9-4007-A72E-2D376E03E55A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="category_id"
-              DTS:DTSID="{5822C732-3F72-4A4D-88BE-12B82FAB1220}"
+              DTS:DTSID="{53CB4DB2-DEC8-444A-B048-C8B2059D45A2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="category_name"
-              DTS:DTSID="{D3BABADF-C5D4-4643-AF59-13497779761F}"
+              DTS:DTSID="{DDE2F401-7BB1-4868-81C9-415AC306CF00}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -561,15 +561,15 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+      DTS:refId="Package.ConnectionManagers[localhost.DataSupplyChain]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{AC397ACF-51D1-4094-AC1F-8997AD0ED3CD}"
-      DTS:ObjectName="QUYNHNHI\MSSQL2025.DataSupplyChain">
+      DTS:ObjectName="localhost.DataSupplyChain">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=QUYNHNHI\MSSQL2025;Initial Catalog=DataSupplyChain;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{AC397ACF-51D1-4094-AC1F-8997AD0ED3CD}QUYNHNHI\MSSQL2025.DataSupplyChain;" />
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=DataSupplyChain;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{AC397ACF-51D1-4094-AC1F-8997AD0ED3CD}QUYNHNHI\MSSQL2025.DataSupplyChain;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -735,7 +735,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -769,8 +769,8 @@
               <connections>
                 <connection
                   refId="Package\Load category\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
-                  connectionManagerRefId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DataSupplyChain]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DataSupplyChain]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1234,7 +1234,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1247,7 +1247,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1268,8 +1268,8 @@
               <connections>
                 <connection
                   refId="Package\Load customer\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
-                  connectionManagerRefId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DataSupplyChain]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DataSupplyChain]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1623,7 +1623,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1657,8 +1657,8 @@
               <connections>
                 <connection
                   refId="Package\Load department\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
-                  connectionManagerRefId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DataSupplyChain]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DataSupplyChain]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2122,7 +2122,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2156,8 +2156,8 @@
               <connections>
                 <connection
                   refId="Package\Load orders\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
-                  connectionManagerRefId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DataSupplyChain]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DataSupplyChain]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2701,7 +2701,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2735,8 +2735,8 @@
               <connections>
                 <connection
                   refId="Package\Load order_items\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
-                  connectionManagerRefId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DataSupplyChain]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DataSupplyChain]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3142,7 +3142,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3176,8 +3176,8 @@
               <connections>
                 <connection
                   refId="Package\Load product\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
-                  connectionManagerRefId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DataSupplyChain]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DataSupplyChain]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3593,7 +3593,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3627,8 +3627,8 @@
               <connections>
                 <connection
                   refId="Package\Load shipping\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
-                  connectionManagerRefId="Package.ConnectionManagers[QUYNHNHI\MSSQL2025.DataSupplyChain]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.DataSupplyChain]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.DataSupplyChain]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3836,31 +3836,31 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="145.5,42"
+          Size="145.6,41.6"
           Id="Package\Load category"
           TopLeft="126,67" />
         <NodeLayout
-          Size="148.5,42"
+          Size="148.8,41.6"
           Id="Package\Load customer"
           TopLeft="663.181818181818,65.4545454545455" />
         <NodeLayout
-          Size="159.5,42"
+          Size="159.2,41.6"
           Id="Package\Load department"
           TopLeft="304,68" />
         <NodeLayout
-          Size="161,42"
+          Size="160.8,41.6"
           Id="Package\Load order_items"
           TopLeft="397,139" />
         <NodeLayout
-          Size="134.5,42"
+          Size="134.4,41.6"
           Id="Package\Load orders"
           TopLeft="587.727272727273,139.181818181818" />
         <NodeLayout
-          Size="141,42"
+          Size="140.8,41.6"
           Id="Package\Load product"
           TopLeft="498,69" />
         <NodeLayout
-          Size="144,42"
+          Size="144,41.6"
           Id="Package\Load shipping"
           TopLeft="208.181818181818,140" />
         <EdgeLayout
@@ -4021,7 +4021,7 @@
     design-time-name="Package\Load category">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Load category\OLE DB Destination"
@@ -4049,7 +4049,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4072,15 +4074,15 @@
     design-time-name="Package\Load customer">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Load customer\Flat File Source"
-          TopLeft="179,163" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Load customer\OLE DB Destination"
           TopLeft="481,180" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Load customer\Flat File Source"
+          TopLeft="179,163" />
         <EdgeLayout
           Id="Package\Load customer.Paths[Flat File Source Output]"
           TopLeft="330,184">
@@ -4112,12 +4114,27 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load customer\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Load department">
     <LayoutInfo>
@@ -4293,7 +4310,7 @@
     design-time-name="Package\Load product">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Load product\OLE DB Destination"
@@ -4321,7 +4338,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4382,19 +4401,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Load shipping\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load customer\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
